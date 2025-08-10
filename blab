@@ -7,11 +7,17 @@
 # ==========================================================================
 
 let temp_file = $"/tmp/comic_(date now | format date '%Y%m%d_%H%M%S_%f')"
+let comic = (http get https://comics-q142.onrender.com/api/comic)
 
-http get https://comics-q142.onrender.com/api/comic
-| $in.images
-| first
-| http get $in
-| save $temp_file
+# Print meta info
+print $"($comic.series) by ($comic.author)"
+
+# Get image
+let img_url = ($comic.images | first)
+http get $img_url | save $temp_file
+
+# Display it
 viu $temp_file
+
+# Clean up
 rm $temp_file
