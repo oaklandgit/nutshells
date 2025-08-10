@@ -3,20 +3,21 @@ A collection of useful nushell scripts. Requires [nushell](https://www.nushell.s
 
 ### 1. bart
 Show BART (Bay Area Rapid Transit) departure times from the station and direction configured in the script.
+
 ```nu
 ~> bart
-Next Southbound trains from ROCK:
+Next Southbound trains from Rockridge:
 ╭─────────┬───────┬────────┬───────╮
 │ minutes │ time  │ length │ bikes │
 ├─────────┼───────┼────────┼───────┤
-│ 18      │ 11:18 │ 8      │ Yes   │
-│ 38      │ 11:38 │ 8      │ Yes   │
-│ 58      │ 11:58 │ 8      │ Yes   │
+│ 5       │ 13:59 │ 8      │ Yes   │
+│ 25      │ 14:19 │ 8      │ Yes   │
+│ 45      │ 14:39 │ 8      │ Yes   │
 ╰─────────┴───────┴────────┴───────╯
 ~>
 ```
 
 ### 2. blab
 Grab a random comic from the B-Lab comics API.
-<img width="2174" height="844" alt="CleanShot 2025-08-10 at 12 00 23" src="https://github.com/user-attachments/assets/91d9906e-12eb-437d-81c7-368b751a9d8b" />
 
+<img width="2178" height="884" alt="CleanShot 2025-08-10 at 13 52 32" src="https://github.com/user-attachments/assets/ef9b1039-fa62-40f3-822b-93ce96993fbd" />
