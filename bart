@@ -5,13 +5,14 @@
 # Directions for all trains are 'North' or 'South'
 
 let api_key = $env.BART_API_KEY
-let station = 'ROCK'
+let stationCode = 'ROCK'
+let stationName = 'Rockridge'
 let direction = 'South'
-let msg = $"Next ($direction)bound trains from ($station):"
+let msg = $"Next ($direction)bound trains from ($stationName):"
 
 print $msg
 
-http get $"https://api.bart.gov/api/etd.aspx?cmd=etd&orig=($station)&key=($api_key)&json=y"
+http get $"https://api.bart.gov/api/etd.aspx?cmd=etd&orig=($stationCode)&key=($api_key)&json=y"
 | $in.root.station
 | first
 | $in.etd.estimate
