@@ -1,5 +1,5 @@
 # Nutshells
-A collection of useful nushell scripts. Requires [nushell](https://www.nushell.sh/).
+A collection of useful (debateable) nushell scripts. Requires [nushell](https://www.nushell.sh/).
 
 ### 1. bart
 Show BART (Bay Area Rapid Transit) departure times from the station and direction configured in the script.
