@@ -1,0 +1,17 @@
+#!/usr/bin/env nu
+
+# ==========================================================================
+# This code is MIT licensed.
+# The comics accessed through this API remain under their original copyright
+# and are not covered by this license.
+# ==========================================================================
+
+let temp_file = $"/tmp/comic_(date now | format date '%Y%m%d_%H%M%S_%f')"
+
+http get https://comics-q142.onrender.com/api/comic
+| $in.images
+| first
+| http get $in
+| save $temp_file
+viu $temp_file
+rm $temp_file
