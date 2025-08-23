@@ -1,10 +1,12 @@
 #!/usr/bin/env nu
 
 # Public key available from https://www.bart.gov/schedules/developers/api
+# Add it to your .env like so "export BART_API_KEY={KEY}"
+
 # Stations can be fetched from this API: https://api.bart.gov/docs/stn/stns.aspx
 # Directions for all trains are 'North' or 'South'
 
-let api_key = $env.BART_API_KEY
+let api_key = $env.BART_API_KEY # Add this to your .env file
 let stationCode = 'ROCK'
 let stationName = 'Rockridge'
 let direction = 'South'
